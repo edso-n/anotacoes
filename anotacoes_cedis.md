@@ -1,11 +1,56 @@
-## Configuração de containers
+## 📦 Configuração de Containers
 
-# Sobre:
-    Trata-se de uma arquitetura multimodal usando LLMs. Utilizamos de três ferramentas até agora: Ollama, OpenWeb, LLMlite.
-    O OpenWeb é a ferramenta de interface gráfica do usuário, ele está ligado ao LLMlite pela rede local na porta 4000.
-    O LLMlite funciona como o maestro/gerenciador que controla qual IA deve ser utilizada. Ele está ligado aos container Ollama em diferentes portas.
-    O Ollama é a ferramenta que permite baixar os modelos de IA.
+### 🧠 Sobre
 
-# Criando um container 
-- OpenWebUI:
-    `docker run --detach --interactive --tty --name ctrOpenweb workdir /openweb --network host andrelanna/openweb-ui:0.6.4 bash`
+Trata-se de uma arquitetura multimodal utilizando LLMs.
+Atualmente são usadas três ferramentas principais:
+
+* **Ollama**
+* **OpenWebUI**
+* **LLMlite**
+
+#### 🔗 Integração entre os serviços
+
+* **OpenWebUI**
+  Interface gráfica do usuário.
+  Conectada ao **LLMlite** pela rede local na porta **4000**.
+
+* **LLMlite**
+  Atua como maestro/gerenciador responsável por decidir qual modelo de IA será utilizado.
+  Conecta-se aos containers do **Ollama** em diferentes portas.
+
+* **Ollama**
+  Responsável pelo download e execução dos modelos de IA.
+
+---
+
+### 🐳 Criando Containers
+
+#### OpenWebUI
+
+```bash
+docker run --detach --interactive --tty --name ctrOpenweb --workdir /openweb --network host andrelanna/openweb-ui:0.6.4 bash
+```
+### Ollama
+
+```bash
+docker run --detach --interactive --tty --name ctrOllama --workdir /ollama --network host andrelanna/ollama bash
+```
+
+### 🐳 Rodando Containers
+
+#### OpenWebUI
+
+```bash
+docker start ctrOpenweb 
+docker exec --interactive --tty --name ctrOpenweb bash
+open-webui serve
+```
+### Ollama
+
+```bash
+docker start ctrOllama 
+docker exec  --interactive --tty --name ctrOllama bash
+ollama serve
+OLLAMA_HOST=127.0.0.1:11435 ollama serve #INICIA UM SEGUNDO CONTAINER NA PORTA 11435
+```
