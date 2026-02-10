@@ -73,5 +73,5 @@ docker start ctrLLMlite
 Para ver os logs (Qual modelo está te respondendo)
 
 ```bash
-docker logs -f litellm-router 2>&1 | grep -E "model|downstream"
+docker logs -f ctrLLMlite 2>&1 | grep -E "model|downstream"
 ```
