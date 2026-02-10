@@ -31,11 +31,21 @@ Atualmente são usadas três ferramentas principais:
 ```bash
 docker run --detach --interactive --tty --name ctrOpenweb --workdir /openweb --network host andrelanna/openweb-ui:0.6.4 bash
 ```
-### Ollama
+#### Ollama
 
 ```bash
 docker run --detach --interactive --tty --name ctrOllama --workdir /ollama --network host andrelanna/ollama bash
 ```
+#### LLMlite
+
+```bash
+docker run -d \
+    --name ctrLLMlite \
+    --network host \
+    -v $(pwd)/litellm_config.yaml:/app/config.yaml \
+    docker.litellm.ai/berriai/litellm:main-latest \
+    --config /app/config.yaml
+```    
 
 ### 🐳 Rodando Containers
 
@@ -46,7 +56,7 @@ docker start ctrOpenweb
 docker exec --interactive --tty --name ctrOpenweb bash
 open-webui serve
 ```
-### Ollama
+#### Ollama
 
 ```bash
 docker start ctrOllama 
