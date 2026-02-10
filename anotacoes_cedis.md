@@ -64,3 +64,14 @@ docker exec  --interactive --tty --name ctrOllama bash
 ollama serve
 OLLAMA_HOST=127.0.0.1:11435 ollama serve #INICIA UM SEGUNDO CONTAINER NA PORTA 11435
 ```
+#### LLMlite
+
+```bash
+docker start ctrLLMlite
+```  
+
+Para ver os logs (Qual modelo está te respondendo)
+
+```bash
+docker logs -f litellm-router 2>&1 | grep -E "model|downstream"
+```
