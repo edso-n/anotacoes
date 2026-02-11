@@ -23,3 +23,42 @@ public class Main{
     }
 }
 ```
+
+## Coletando input do teclado
+
+```Java
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner leitura = new Scanner(System.in);
+
+        System.out.println("Digite seu nome: ");
+        String nome = leitura.nextLine();
+        leitura.close();
+        System.out.println("Bem vindo " + nome);
+
+    }
+}
+```
+
+## Estrutura de decisão
+
+```Java
+public class Main{
+    public static void main(String[] args){
+        Scanner leitura = new Scanner(System.in);
+
+        System.out.println("Digite um número: ");
+        int numero = leitura.nextInt();
+
+        if(numero < 10){
+            System.out.println("É menor que 10");
+        }
+        else{
+            System.out.println("É maior que 10");
+        }
+
+    }
+}
+```
