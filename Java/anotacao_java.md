@@ -45,6 +45,8 @@ public class Main{
 ## Estrutura de decisão
 
 ```Java
+import java.util.Scanner;
+
 public class Main{
     public static void main(String[] args){
         Scanner leitura = new Scanner(System.in);
@@ -52,11 +54,14 @@ public class Main{
         System.out.println("Digite um número: ");
         int numero = leitura.nextInt();
 
-        if(numero < 10){
-            System.out.println("É menor que 10");
+        if (numero > 0){
+            System.out.println("O valor: " + numero + " é positivo");
+        }
+        else if (numero == 0){
+            System.out.println("O valor " + numero + " é igual a zero");
         }
         else{
-            System.out.println("É maior que 10");
+            System.out.println("O valor " + numero + " é negativo");
         }
     }
 }
@@ -112,4 +117,29 @@ public class Main {
       }
   }
 }
+```
+
+## Estrutura de repetição
+### Laço for
+
+```java
+    public class Main{
+    public static void main(String[] args){
+        //CRESCENTE
+        for(int i=0; i<10;i++){
+            System.out.println(i);
+       }
+
+       //DECRESCENTE
+       for (int i = 10; i > 0; i--) {
+            System.out.println(i);
+       }
+    }
+}
+```
+
+### While
+
+```java
+
 ```
