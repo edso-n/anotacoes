@@ -141,5 +141,18 @@ public class Main {
 ### While
 
 ```java
+import java.util.Scanner;
 
+public class Main{
+    Scanner leitura = new Scanner(System.in);
+    public static void main(String[] args){
+        int online = 0;
+
+        while(online < 10){
+            System.out.println("Vou somar +1");
+            online++;
+            System.out.println(online);
+        }
+    }
+}
 ```
