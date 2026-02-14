@@ -287,7 +287,7 @@ public boolean sacar(int valor) {
 ## Interface
 
 ```java
-//Implementa um contrato.
+//Implementa um contrato. O Java te obriga a implementar esse método.
 
 public interface Tributavel {
     double calcularImposto();
