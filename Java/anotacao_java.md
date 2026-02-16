@@ -300,6 +300,40 @@ public class ContaInvestimento extends ContaBancaria implements Tributavel {
     }
 }
 ```
+## Consumindo APIs
+
+```java
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandlers;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception, InterruptedException{
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Digite o nome de um filme: ");
+        String nome_filme = leitura.nextLine();
+        leitura.close();
+
+        String endereco = "https://www.omdbapi.com/?t=" + nome_filme +"&apikey=6585022c";
+
+        HttpClient cliente = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+          .uri(URI.create(endereco))
+          .build();
+        
+        
+        HttpResponse<String> response = cliente
+            .send(request, BodyHandlers.ofString());
+
+        System.out.println(response.body());    
+    }
+}
+```
+
 
 ## Tratamento de erros
 
