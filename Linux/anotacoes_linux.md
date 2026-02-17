@@ -37,3 +37,15 @@ exit #: Encerra a sessão atual de shell, seja ela como usuário normal ou root.
 ```bash
 git clone # Cria uma cópia local de um repositório Git remoto. Exemplo: git clone https://github.com/alura-cursos/adopet-frontend-cypress clona o repositório 
 ```
+
+```bash
+touch nome_arquivo.txt #Cria um arquivo vazio
+```
+
+```bash
+mv arquivo_a_ser_movido detino_final
+```
+
+```bash
+cp arquivo_a_ser_copiado nome_do_arquivo_copia #Copia um arquivo
+```
