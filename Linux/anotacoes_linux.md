@@ -49,3 +49,36 @@ mv arquivo_a_ser_movido detino_final
 ```bash
 cp arquivo_a_ser_copiado nome_do_arquivo_copia #Copia um arquivo
 ```
+
+```bash
+rm -i #(Remove Interactive): Remove arquivos 
+```
+
+```bash
+rmdir #remove diretórios
+```
+
+```bash
+rm -i #Remoção interativa -pergunta se pode remover
+```
+
+```bash
+rm -r #remove diretórios e seu conteúdo de forma recursiva
+```
+
+```bash
+ls > arquivo.txt #Redireciona a saída do comando ls para o arquivo.txt (Criando-o caso não exista)
+```
+
+```bash
+ls >> arquivo.txt #faz a mesma coisa do anterior, mas ao invés de sobrescrever ele adiciona ao final do arquivo
+```
+
+```bash
+echo "Olá mundo" >> arquivo.txt #Adiciona "Olá mundo" na ultima linha do arquivo.txt
+```
+
+```bash
+sudo apt update #procura e lista atualizações
+sudo apt upgrade #Atualiza de fato
+```
