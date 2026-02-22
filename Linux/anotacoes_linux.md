@@ -82,3 +82,34 @@ echo "Olá mundo" >> arquivo.txt #Adiciona "Olá mundo" na ultima linha do arqui
 sudo apt update #procura e lista atualizações
 sudo apt upgrade #Atualiza de fato
 ```
+
+```bash
+top #Mostra em detalhes e em tempo real os processos em execução
+```
+
+```bash
+ps #fornece uma fotografia dos processos em execução no momento
+ps aux #lista todos os processos em exxecução em detalhes
+ps -u edson #exibe e filtra os processos do usuário edson
+pstree #mostra os processos organizados hierárquicamente em forma de árvore
+```
+```bash
+head #Exibe as primeiras linhas de um arquivo (10 por padrão)
+head -n 20 #exibe as 20 primeiras linhas
+```
+
+```bash
+kill processo #Interrompe processos 
+```
+
+```bash
+sort teoria_mds | cat 
+#ordena o arquivo teoria_mds e printa na tela
+
+#A "|" serve como uma função composta y | f(X) = f(y)
+```
+
+```bash
+head teoria_mds | grep eu #pega as 10 primeiras linhas de teoria_mds e filtra pela palavra eu.
+
+```
