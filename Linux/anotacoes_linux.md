@@ -113,3 +113,15 @@ sort teoria_mds | cat
 head teoria_mds | grep eu #pega as 10 primeiras linhas de teoria_mds e filtra pela palavra eu.
 
 ```
+
+    ssh (Secure Shell): Estabelece uma conexão segura entre um cliente e um servidor remoto.
+
+    ssh -i caminho/para/sua-chave.pem usuário@ip_da_instância (SSH with Identity File): Conecta-se a uma instância EC2 usando um arquivo de chave privada para autenticação.
+
+    chmod (Change Mode): Modifica as permissões de arquivos ou diretórios.
+
+    chmod 400 caminho/para/sua-chave.pem (Change Mode 400): Define permissões de leitura para o proprietário e remove todas as permissões para grupo e outros usuários.
+
+    sudo yum update (YUM Update): Atualiza todos os pacotes instalados na distribuição Linux baseada em CentOS, como o Amazon Linux.
+
+    history (History): Exibe o histórico de comandos executados no terminal.
