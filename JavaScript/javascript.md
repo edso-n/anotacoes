@@ -43,73 +43,31 @@ x % 2 == 0 ? alert("é par!") : alert("é ímpar!")
 
 ## Switch case
 
-```Java
-public class Main {
-  public static void main(String[] args) {
-  
-      int mes = 10;
-      
-      switch (mes) {
-          case 1:  
-              System.out.println("Janeiro");
-              break;
-          case 2:
-              System.out.println("Fevereiro");
-              break;
-          case 3:  
-                System.out.println("Março");
-              break;
-          case 4:  
-              System.out.println("Abril");
-              break;
-          case 5:  
-              System.out.println("Maio");
-              break;
-          case 6:  
-              System.out.println("Junho");
-              break;
-          case 7:
-              System.out.println("Julho");  
-              break;
-          case 8:  
-              System.out.println("Agosto");
-              break;
-          case 9:  
-              System.out.println("Setembro");
-              break;
-          case 10: 
-              System.out.println("Outubro");
-              break;
-          case 11: 
-              System.out.println("Novembro");
-              break;
-          case 12: 
-              System.out.println("Dezembro");
-              break;
-          default: 
-              System.out.println("Mês inválido");
-              break;
-      }
-  }
+```js
+switch (expressao) {
+  case valor1:
+    // código executado se expressao === valor1
+    break;
+
+  case valor2:
+    // código executado se expressao === valor2
+    break;
+
+  case valor3:
+    // código executado se expressao === valor3
+    break;
+
+  default:
+    // código executado se nenhum case for verdadeiro
 }
 ```
 
 ## Estrutura de repetição
 ### Laço for
 
-```java
-    public class Main{
-    public static void main(String[] args){
-        //CRESCENTE
-        for(int i=0; i<10;i++){
-            System.out.println(i);
-       }
-
-       //DECRESCENTE
-       for (int i = 10; i > 0; i--) {
-            System.out.println(i);
-       }
-    }
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
 }
 ```
 
@@ -121,6 +79,15 @@ let numero = 0
 while(numero < 5){
     numero++;
 }
+```
+
+## Função
+```js
+function saudacao() {
+  console.log("Olá!");
+}
+
+saudacao(); // chama a função
 ```
 
 ## Exemplo de classe
